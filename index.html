@@ -4,45 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>متجر الكاميرات</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Tahoma', sans-serif;
       margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background-color: #121212;
-      color: white;
+      background-color: #111;
+      color: #fff;
       text-align: center;
     }
 
     header {
-      background-color: #000;
-      padding: 10px;
+      background-image: url('assets/header.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    header img {
-      height: 60px;
+    header h1 {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
     }
 
-    h1 {
-      margin: 30px;
-    }
-
-    .brands-container {
+    .brands {
       display: flex;
       justify-content: center;
-      gap: 40px;
-      padding: 40px;
+      gap: 50px;
+      margin: 40px auto;
       flex-wrap: wrap;
     }
 
     .brand {
-      width: 300px;
-      background-color: #1e1e1e;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #000;
+      background-color: #222;
+      border-radius: 15px;
       overflow: hidden;
-      cursor: pointer;
       transition: transform 0.3s;
+      width: 300px;
     }
 
     .brand:hover {
@@ -55,32 +55,53 @@
       object-fit: cover;
     }
 
-    .brand-title {
-      padding: 15px;
-      font-size: 20px;
-      background-color: #ff6600;
+    .brand h2 {
+      margin: 15px 0;
+    }
+
+    .brand a {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #e60023;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #000;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="assets/images/logo.jpg" alt="شعار المتجر">
+    <h1>مرحبًا بكم في متجر الكاميرات</h1>
   </header>
 
-  <h1>اختر ماركة الكاميرات</h1>
-
-  <div class="brands-container">
-    <div class="brand" onclick="location.href='hikvision.html'">
-      <img src="assets/images/hikvision-main.jpg" alt="Hikvision">
-      <div class="brand-title">Hikvision</div>
+  <section>
+    <h2>اختر ماركة الكاميرات</h2>
+    <div class="brands">
+      <div class="brand">
+        <img src="assets/images/hikvision.jpg" alt="Hikvision">
+        <h2>Hikvision</h2>
+        <a href="hikvision.html">عرض المنتجات</a>
+      </div>
+      <div class="brand">
+        <img src="assets/images/dahua.jpg" alt="Dahua">
+        <h2>Dahua</h2>
+        <a href="dahua.html">عرض المنتجات</a>
+      </div>
     </div>
+  </section>
 
-    <div class="brand" onclick="location.href='dahua.html'">
-      <img src="assets/images/dahua-main.jpg" alt="Dahua">
-      <div class="brand-title">Dahua</div>
-    </div>
-  </div>
+  <footer>
+    &copy; 2025 متجر الكاميرات - جميع الحقوق محفوظة.
+  </footer>
 
 </body>
 </html>
