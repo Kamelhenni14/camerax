@@ -17,9 +17,6 @@
     header {
       background-color: #000;
       padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     header img {
@@ -27,26 +24,25 @@
     }
 
     h1 {
-      margin: 20px 0;
-      font-size: 28px;
-      color: #f0f0f0;
+      margin: 30px;
     }
 
     .brands-container {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 40px;
       padding: 40px;
+      flex-wrap: wrap;
     }
 
     .brand {
-      cursor: pointer;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 10px #000;
-      transition: transform 0.3s;
       width: 300px;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s;
     }
 
     .brand:hover {
@@ -55,35 +51,35 @@
 
     .brand img {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 200px;
+      object-fit: cover;
     }
 
-    .brand-name {
-      background-color: #222;
-      padding: 10px;
+    .brand-title {
+      padding: 15px;
       font-size: 20px;
-      font-weight: bold;
+      background-color: #ff6600;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="assets/images/logo.png" alt="شعار المتجر">
+    <img src="assets/images/logo.jpg" alt="شعار المتجر">
   </header>
 
-  <h1>اختر الماركة لعرض المنتجات</h1>
+  <h1>اختر ماركة الكاميرات</h1>
 
   <div class="brands-container">
-    <a href="hikvision.html" class="brand">
+    <div class="brand" onclick="location.href='hikvision.html'">
       <img src="assets/images/hikvision-main.jpg" alt="Hikvision">
-      <div class="brand-name">كاميرات Hikvision</div>
-    </a>
-    <a href="dahua.html" class="brand">
+      <div class="brand-title">Hikvision</div>
+    </div>
+
+    <div class="brand" onclick="location.href='dahua.html'">
       <img src="assets/images/dahua-main.jpg" alt="Dahua">
-      <div class="brand-name">كاميرات Dahua</div>
-    </a>
+      <div class="brand-title">Dahua</div>
+    </div>
   </div>
 
 </body>
