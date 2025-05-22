@@ -4,27 +4,44 @@
   <meta charset="UTF-8">
   <title>متجر الكاميرات</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: 'Tahoma', sans-serif;
-      background-color: #111;
-      color: white;
+      font-family: 'Cairo', sans-serif;
+      background-color: #0e0e0e;
+      color: #f0f0f0;
     }
     .navbar {
-      background-color: #000;
-      padding: 15px;
+      background-color: #1a1a1a;
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
     .navbar h1 {
       margin: 0;
-      font-size: 24px;
+      font-size: 28px;
+      color: #00d1b2;
     }
     .cart {
-      font-size: 20px;
+      font-size: 24px;
       cursor: pointer;
+      position: relative;
+    }
+    .cart-count {
+      position: absolute;
+      top: -5px;
+      left: -10px;
+      background-color: red;
+      color: white;
+      font-size: 12px;
+      padding: 2px 5px;
+      border-radius: 50%;
     }
     .slider {
       display: flex;
@@ -44,15 +61,15 @@
       padding: 20px;
     }
     .product {
-      background-color: #222;
-      border-radius: 10px;
+      background-color: #1c1c1c;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 0 10px #000;
+      box-shadow: 0 0 12px rgba(0,0,0,0.5);
       text-align: center;
       transition: transform 0.3s;
     }
     .product:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
     .product img {
       width: 100%;
@@ -60,21 +77,49 @@
       object-fit: cover;
     }
     .product h2 {
-      margin: 10px 0;
+      margin: 10px 0 5px;
+    }
+    .product p {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+    .product button {
+      margin-bottom: 15px;
+      padding: 10px 20px;
+      background-color: #00d1b2;
+      border: none;
+      color: black;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .product button:hover {
+      background-color: #00bfa1;
     }
     .footer {
-      background-color: #000;
+      background-color: #1a1a1a;
       padding: 10px;
       text-align: center;
       font-size: 14px;
+      color: #777;
     }
   </style>
+  <script>
+    let cartCount = 0;
+    function addToCart() {
+      cartCount++;
+      document.getElementById("cart-count").innerText = cartCount;
+    }
+  </script>
 </head>
 <body>
-
   <div class="navbar">
     <h1>كاميرا إكس</h1>
-    <div class="cart">🛒</div>
+    <div class="cart">
+      🛒 <span id="cart-count" class="cart-count">0</span>
+    </div>
   </div>
 
   <div class="slider">
@@ -88,27 +133,30 @@
       <img src="assets/images/image1.jpg" alt="كاميرا 1">
       <h2>كاميرا خارجية</h2>
       <p>رؤية ليلية ومقاومة للماء</p>
+      <button onclick="addToCart()">أضف إلى السلة</button>
     </div>
     <div class="product">
       <img src="assets/images/image2.jpg" alt="كاميرا 2">
       <h2>كاميرا داخلية</h2>
       <p>تصميم عصري وجودة HD</p>
+      <button onclick="addToCart()">أضف إلى السلة</button>
     </div>
     <div class="product">
       <img src="assets/images/image3.jpg" alt="DVR">
       <h2>DVR</h2>
       <p>جهاز تسجيل بـ 4 قنوات</p>
+      <button onclick="addToCart()">أضف إلى السلة</button>
     </div>
     <div class="product">
       <img src="assets/images/image4.jpg" alt="إكسسوارات">
       <h2>إكسسوارات</h2>
       <p>كوابل ومحولات عالية الجودة</p>
+      <button onclick="addToCart()">أضف إلى السلة</button>
     </div>
   </div>
 
   <div class="footer">
-    تواصل معنا عبر الهاتف أو الواتساب | جميع الحقوق محفوظة
+    &copy; 2025 جميع الحقوق محفوظة - كاميرا إكس
   </div>
-
 </body>
 </html>
