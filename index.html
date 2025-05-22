@@ -1,35 +1,95 @@
-
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>متجر كاميرا إكس</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <title>متجر كاميرات المراقبة</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      padding: 30px;
+    }
+    .product {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .product img {
+      width: 250px;
+      height: auto;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 20px;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>كاميرا إكس</h1>
-    <p>أفضل متجر لشراء الكاميرات</p>
+    <h1>متجر الكاميرات</h1>
+    <p>أفضل العروض على كاميرات المراقبة</p>
   </header>
-  <main>
-    <section>
-      <h2>منتجاتنا</h2>
-      <div class="gallery">
-        <img src="assets/images/image1.jpg" alt="كاميرا 1" />
-        <img src="assets/images/image2.jpg" alt="كاميرا 2" />
-        <img src="assets/images/image3.jpg" alt="كاميرا 3" />
-        <img src="assets/images/image4.jpg" alt="كاميرا 4" />
+
+  <div class="container">
+    <div class="product">
+      <img src="assets/images/image1.jpg" alt="كاميرا 1">
+      <div class="product-info">
+        <h2>كاميرا خارجية</h2>
+        <p>مناسبة للاستخدام الخارجي، مقاومة للعوامل الجوية.</p>
       </div>
-    </section>
-    <section>
-      <h2>تواصل معنا</h2>
-      <p>الهاتف: 0123456789</p>
-      <p>واتساب: 0123456789</p>
-    </section>
-  </main>
+    </div>
+
+    <div class="product">
+      <img src="assets/images/image2.jpg" alt="كاميرا 2">
+      <div class="product-info">
+        <h2>كاميرا داخلية</h2>
+        <p>تصميم أنيق ومثالي للمنزل أو المكتب.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="assets/images/image3.jpg" alt="كاميرا 3">
+      <div class="product-info">
+        <h2>جهاز DVR</h2>
+        <p>يسمح بتسجيل الفيديوهات من جميع الكاميرات بدقة عالية.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="assets/images/image4.jpg" alt="كاميرا 4">
+      <div class="product-info">
+        <h2>إكسسوارات</h2>
+        <p>كابلات، محولات، حوامل وغيرها من المستلزمات.</p>
+      </div>
+    </div>
+  </div>
+
   <footer>
-    <p>© 2025 متجر كاميرا إكس</p>
+    تواصل معنا: 0123456789 | واتساب | الجزائر العاصمة
   </footer>
 </body>
 </html>
