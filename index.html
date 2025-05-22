@@ -1,87 +1,158 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
+<header class="navbar">
+    <img src="assets/images/logo.jpg" alt="Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="dahua.html">Dahua</a></li>
+        <li><a href="hikvision.html">Hikvision</a></li>
+        <li><a href="#">اتصل بنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>متجر الكاميرات</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Cairo', sans-serif;
-    }
-
-    body {
-      background: linear-gradient(120deg, #1a1a1a, #0d0d0d);
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    /* خلفية متحركة */
-    .animated-bg {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle, #111 20%, transparent 20%), radial-gradient(circle, #111 20%, transparent 20%);
-      background-position: 0 0, 25px 25px;
-      background-size: 50px 50px;
-      z-index: -1;
-      animation: move 10s linear infinite;
-    }
-
-    @keyframes move {
-      0% {background-position: 0 0, 25px 25px;}
-      100% {background-position: 50px 50px, 75px 75px;}
-    }
-
-    /* الشريط العلوي */
-    header {
+    .navbar {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 20px 40px;
-      background: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      background-color: #111;
+      padding: 10px 30px;
       position: fixed;
-      width: 100%;
       top: 0;
-      z-index: 10;
-      box-shadow: 0 0 20px #000;
+      width: 100%;
+      z-index: 1000;
     }
 
     .logo {
       height: 50px;
+      border-radius: 8px;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin-left: 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #00bcd4;
+    }
+      body {
+      margin: 0;
+      font-family: 'Tahoma', sans-serif;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* خلفية متحركة */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+      background-size: 400% 400%;
+      animation: gradientWave 15s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes gradientWave {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      height: 200px;
+      background-image: url('assets/header.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header h1 {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
       border-radius: 10px;
     }
 
-    nav ul {
+    .brands {
       display: flex;
-      gap: 25px;
-      list-style: none;
+      justify-content: center;
+      gap: 50px;
+      margin: 40px auto;
+      flex-wrap: wrap;
     }
 
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
-      position: relative;
+    .brand {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      width: 300px;
     }
 
-    nav ul li a::after {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      background: #0ff;
-      bottom: -5px;
-      left: 0;
-      transition: 0.3s;
+    .brand:hover {
+      transform: scale(1.05);
     }
 
-    nav ul li a:hover::after {
+    .brand img {
       width: 100%;
+      height: 200px;
+      object-fit: cover;
     }
+
+    .brand h2 {
+      margin: 15px 0;
+    }
+
+    .brand a {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #e60023;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>مرحبًا بكم في متجر الكاميرات</h1>
+  </header>
+
   <section>
     <h2>اختر ماركة الكاميرات</h2>
     <div class="brands">
@@ -97,42 +168,10 @@
       </div>
     </div>
   </section>
-    }
 
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 20px;
-      color: #ccc;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- خلفية متحركة -->
-  <div class="animated-bg"></div>
-
-  <!-- شريط علوي -->
-  <header>
-    <img src="assets/images/logo.jpg" alt="الشعار" class="logo">
-    <nav>
-      <ul>
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="dahua.html">Dahua</a></li>
-        <li><a href="hikvision.html">Hikvision</a></li>
-        <li><a href="#">اتصل بنا</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- محتوى -->
-  <div class="main-content">
-    <h1>مرحبًا بكم في متجر الكاميرات</h1>
-    <p>اختر الماركة لعرض المنتجات</p>
-  </div>
+  <footer>
+    &copy; 2025 متجر الكاميرات - جميع الحقوق محفوظة.
+  </footer>
 
 </body>
 </html>
