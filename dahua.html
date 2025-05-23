@@ -9,9 +9,7 @@
   <style>
   
   body {
-    background: linear-gradient(-45deg, #000000, #1a1a1a, #333333, #000000);
-background-size: 400% 400%;
-animation: waveBackground 10s ease infinite;
+    
 
       margin: 0;
       font-family: 'Cairo', sans-serif;
@@ -72,6 +70,22 @@ animation: waveBackground 10s ease infinite;
 
     .product button:hover {
       background-color: #ff8533;
+    }
+
+    {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      color: white;
+      text-align: center;
+      background: linear-gradient(-45deg, #000000, #1a1a1a, #333333, #000000);
+      background-size: 400% 400%;
+      animation: waveBackground 10s ease infinite;
+    }
+
+    @keyframes waveBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
   </style>
 </head>
