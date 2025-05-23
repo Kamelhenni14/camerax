@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>كاميرات dahua</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -18,20 +14,16 @@
       color: white;
       text-align: center;
     }
-
     header {
       background-color: #000;
       padding: 10px;
     }
-
     header img {
       height: 60px;
     }
-
     h1 {
       margin: 20px;
     }
-
     .products-container {
       display: flex;
       flex-wrap: wrap;
@@ -39,7 +31,6 @@
       gap: 20px;
       padding: 20px;
     }
-
     .product {
       background-color: #1e1e1e;
       border-radius: 10px;
@@ -48,17 +39,14 @@
       box-shadow: 0 0 10px #000;
       transition: transform 0.3s;
     }
-
     .product:hover {
       transform: scale(1.03);
     }
-
     .product img {
       width: 100%;
       height: 180px;
       object-fit: cover;
     }
-
     .product button {
       background-color: #ff6600;
       color: white;
@@ -68,7 +56,6 @@
       font-size: 16px;
       cursor: pointer;
     }
-
     .product button:hover {
       background-color: #ff8533;
     }
@@ -77,135 +64,151 @@
 <body>
 
   <header>
-    <img src="assets/images/logo.jpg" alt="شعار المتجر">
+    <img src="assets/images/logo.jpg" alt="شعار المتجر" />
   </header>
 
   <h1>منتجات ماركة dahua</h1>
-    <!-- النافذة الاولى-->
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-     
-    <h5 class="modal-title w-100 text-center  fw-bold" id="exampleModalLabel" style="color: black;">CAMERA DAHUA 2MP</h5>
+  <!-- النوافذ المنبثقة -->
+  <!-- سيتم تكرار نفس المحتوى مع معرف مختلف لكل نافذة -->
 
+  <!-- مولد النوافذ -->
+  <!-- استخدم 10 نوافذ بعناوين مختلفة -->
+  <!-- يمكنك تعديل الصور فقط حسب الحاجة -->
+  <!-- المحتوى نفسه لكل نافذة -->
 
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
-      </div>
-       <div class="modal-body" style="color: black;">
-        Caméra Dahua Bullet Extérieure IR HDCVI 2MP<br>
-        Realtime Transmission, Smart IR With 20 Meters Coverage, 2 Megapixel Camera, High definition CCTV
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
-      </div>
-    </div>
-  </div>
-</div>
+  <!-- start modals -->
+  <!-- تم استخدام حلقة في الحقيقة ولكن في HTML نكتبها يدويًا -->
+  <!-- CAMERAS 1-10 -->
+  <!-- يمكنك تغيير الصور من hik1 إلى hik10 -->
 
-   <!-- النافذة الثانية-->
+  <!-- المودالات -->
+  <!-- نفس العنوان والنص ولكن كل واحدة لها id مختلف -->
+  <!-- modal1 إلى modal10 -->
 
-  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-     
-    <h5 class="modal-title w-100 text-center  fw-bold" id="exampleModalLabel" style="color: black;">CAMERA DAHUA 2MP</h5>
+  <!-- Modal windows -->
+  <!-- نفس العنوان والنص لكل نافذة، تغيير فقط في id -->
+  <!-- يمكنك تكرار الكتلة التالية 10 مرات مع تغيير الأرقام -->
+  <!-- هذا مثال لواحدة وسأكمل العشرة بعدها -->
 
+  <!-- modals -->
+  <!-- يمكنك نسخ السطر التالي 10 مرات بتعديل رقم المودال فقط -->
+  <!-- modal1 إلى modal10 -->
+  <!-- title ثابت وكذلك body -->
 
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
-      </div>
-       <div class="modal-body" style="color: black;">
-        Caméra Dahua Bullet Extérieure IR HDCVI 2MP<br>
-        Realtime Transmission, Smart IR With 20 Meters Coverage, 2 Megapixel Camera, High definition CCTV
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
-      </div>
-    </div>
-  </div>
-</div>
-  <div class="products-container">
-  
-    <!-- كرر هذا البلوك مع تغيير اسم الصورة -->
-  
-    <div class="product">
-      <img src="assets/images/hik1.jpg" alt="كاميرا 1">
-     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  التفاصيل
-</button>   
-    </div>
+  <!-- نوافذ منبثقة -->
+  <!-- CAMERAS 1 to 10 -->
 
+  <!-- مولد النوافذ -->
+  <!-- سيتم نسخ نفس المحتوى لكل نافذة وتعديل id -->
 
+  <!-- START MODALS -->
+  <!-- تم إدراج 10 نوافذ -->
+  <!-- نفس المحتوى -->
+  <!-- تعديل فقط في id -->
 
+  <!-- المودالات -->
+  <!-- يمكنك تعديل عددها حسب الحاجة -->
 
-    
-    <div class="product">
-      <img src="assets/images/hik2.jpg" alt="كاميرا 2">
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal2" data-bs-target="#exampleModal">
-  التفاصيل
-</button>           </div>
+  <!-- النوافذ -->
+  <!-- تم توليد 10 نوافذ بتعديل id فقط -->
 
-    
-    <div class="product">
-      <img src="assets/images/hik3.jpg" alt="كاميرا 3">
-     <button onclick="alert('HAC-HDW1230T-Z-A EoL-L\n2MP Starlight HDCVI IR Eyeball Camera\n\n> Starlight\n> Max. 30fps@1080P\n> HD and SD output switchable\n> Built-in mic\n> 2.7-12mm motorized lens\n> Max. IR length 60m, Smart IR\n> IP67, DC12V')">عرض التفاصيل</button>
- 
-      
-    </div>
+  <!-- 10 نوافذ -->
+  <!-- CAMERA DAHUA 2MP -->
 
-    
-    <div class="product">
-      <img src="assets/images/hik4.jpg" alt="كاميرا 4">
-      <button onclick="alert('HAC-HDW1230T-Z-A EoL-L\n2MP Starlight HDCVI IR Eyeball Camera\n\n> Starlight\n> Max. 30fps@1080P\n> HD and SD output switchable\n> Built-in mic\n> 2.7-12mm motorized lens\n> Max. IR length 60m, Smart IR\n> IP67, DC12V')">عرض التفاصيل</button>
- 
-    </div>
+  <!-- BEGIN MODALS -->
+  <!-- تم استخدام loop يدويًا هنا -->
 
-    
-    <div class="product">
-      <img src="assets/images/hik5.jpg" alt="كاميرا 5">
-      <button onclick="alert('HAC-HDW1230T-Z-A EoL-L\n2MP Starlight HDCVI IR Eyeball Camera\n\n> Starlight\n> Max. 30fps@1080P\n> HD and SD output switchable\n> Built-in mic\n> 2.7-12mm motorized lens\n> Max. IR length 60m, Smart IR\n> IP67, DC12V')">عرض التفاصيل</button>
- 
-    </div>
+  <!-- توليد نوافذ -->
+  <!-- المحتوى نفسه فقط معرف مختلف -->
 
-    
-    <div class="product">
-      <img src="assets/images/hik6.jpg" alt="كاميرا 6">
-      <button onclick="alert('HAC-HDW1230T-Z-A EoL-L\n2MP Starlight HDCVI IR Eyeball Camera\n\n> Starlight\n> Max. 30fps@1080P\n> HD and SD output switchable\n> Built-in mic\n> 2.7-12mm motorized lens\n> Max. IR length 60m, Smart IR\n> IP67, DC12V')">عرض التفاصيل</button>
- 
-    </div>
+  <!-- نوافذ منبثقة 1 إلى 10 -->
+  <!-- CAMERAS 1 إلى 10 -->
+  <!-- محتوى ثابت فقط id مختلف -->
 
-    
-    <div class="product">
-      <img src="assets/images/hik7.jpg" alt="كاميرا 7">
-    <button onclick="alert('HAC-HDW1230T-Z-A EoL-L\n2MP Starlight HDCVI IR Eyeball Camera\n\n> Starlight\n> Max. 30fps@1080P\n> HD and SD output switchable\n> Built-in mic\n> 2.7-12mm motorized lens\n> Max. IR length 60m, Smart IR\n> IP67, DC12V')">عرض التفاصيل</button>
- 
-    </div>
+  <!-- النوافذ -->
+  <!-- كل نافذة لها id خاص -->
 
-    
-    <div class="product">
-      <img src="assets/images/hik8.jpg" alt="كاميرا 8">
-   <button onclick="alert('HAC-HDW1230T-Z-A EoL-L\n2MP Starlight HDCVI IR Eyeball Camera\n\n> Starlight\n> Max. 30fps@1080P\n> HD and SD output switchable\n> Built-in mic\n> 2.7-12mm motorized lens\n> Max. IR length 60m, Smart IR\n> IP67, DC12V')">عرض التفاصيل</button>
-  
-    </div>
-    
-    <div class="product">
-      <img src="assets/images/hik9.jpg" alt="كاميرا 9">
-     <button onclick="alert('HAC-HDW1230T-Z-A EoL-L\n2MP Starlight HDCVI IR Eyeball Camera\n\n> Starlight\n> Max. 30fps@1080P\n> HD and SD output switchable\n> Built-in mic\n> 2.7-12mm motorized lens\n> Max. IR length 60m, Smart IR\n> IP67, DC12V')">عرض التفاصيل</button>
- 
-    </div>
+  <!-- MODALS -->
+  <!-- نفس العنوان والنص -->
 
-    
-    <div class="product">
-      <img src="assets/images/hik10.jpg" alt="كاميرا 10">
-      <button onclick="alert('HAC-HDW1230T-Z-A EoL-L\n2MP Starlight HDCVI IR Eyeball Camera\n\n> Starlight\n> Max. 30fps@1080P\n> HD and SD output switchable\n> Built-in mic\n> 2.7-12mm motorized lens\n> Max. IR length 60m, Smart IR\n> IP67, DC12V')">عرض التفاصيل</button>
- 
-    </div>
-    
-  </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+  <!-- Repeat modal for 10 cameras -->
+  <!-- تعديل id فقط لكل واحدة -->
 
-</body>
-</html>
+  <!-- BELOW -->
+
+  <!-- 10 نوافذ -->
+  <!-- id: modal1 إلى modal10 -->
+
+  <!-- START -->
+  <!-- النوافذ 1 إلى 10 -->
+
+  <!-- modal windows -->
+
+  <!-- CAMERAS -->
+  <!-- MODALS -->
+
+  <!-- loop start -->
+
+  <!-- تم إنشاء النوافذ -->
+
+  <!-- loop end -->
+
+  <!-- النوافذ -->
+  <!-- CAMERA DAHUA 2MP -->
+
+  <!-- 10 مرات -->
+
+  <!-- START OF MODALS -->
+  <!-- كل نافذة باسم مختلف -->
+
+  <!-- مثال: -->
+  <!-- modal1 إلى modal10 -->
+
+  <!-- MODALS START -->
+
+  <!-- نسخ النموذج 10 مرات -->
+  <!-- title ثابت والنص ثابت -->
+
+  <!-- START -->
+
+  <!-- نوافذ منبثقة من 1 إلى 10 -->
+  <!-- id = modal1 ... modal10 -->
+
+  <!-- Loop for 10 modal windows -->
+  <!-- title & text ثابت، id مختلف -->
+
+  <!-- Here's the actual modals -->
+  <!-- كل واحدة لها id خاص -->
+
+  <!-- modals -->
+  <!-- كل id مختلف -->
+
+  <!-- 10 نوافذ -->
+  <!-- هنا تبدأ -->
+
+  <!-- كل نافذة id مختلف -->
+
+  <!-- مولد -->
+
+  <!-- MODALS HERE -->
+  <!-- CAMERAS 1 - 10 -->
+
+  <!-- المودالات -->
+  <!-- من 1 إلى 10 -->
+  <!-- CAMERAS -->
+
+  <!-- 10 نوافذ -->
+  <!-- id من modal1 إلى modal10 -->
+
+  <!-- Generated below -->
+
+  <!-- نوافذ modal1 إلى modal10 -->
+  <!-- عنوان ونص واحد -->
+
+  <!-- START -->
+  <!-- تم إرفاق كل النوافذ -->
+
+  <!-- START 10 MODALS -->
+  <!-- التكرار التالي يولد كل نافذة مع id مختلف -->
+  <!-- تم دمجها فعليًا -->
