@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>تركيب كاميرات المراقبة - عرض خاص</title>
   <style>
     body { font-family: Tahoma, sans-serif; margin: 0; padding: 0; background: #f0f2f5; color: #111; }
@@ -10,8 +10,9 @@
     h1 { color: #d91e18; text-align: center; }
     ul { padding: 0 20px; }
     li { margin-bottom: 10px; }
-    .cta { background: #28a745; color: #fff; padding: 15px; text-align: center; margin-top: 20px; font-size: 18px; border-radius: 8px; text-decoration: none; display: block; }
-    .cta:hover { background: #218838; }
+    input, button { width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px; }
+    button { background: #25D366; color: white; border: none; cursor: pointer; }
+    button:hover { background: #1da851; }
     .testimonials { margin-top: 30px; font-size: 14px; background: #f9f9f9; padding: 10px; border-radius: 6px; }
     .footer { text-align: center; font-size: 12px; color: #555; margin-top: 20px; }
   </style>
@@ -19,27 +20,45 @@
 <body>
   <div class="container">
     <h1>هل منزلك آمن فعلًا؟</h1>
-    <p><strong>تركيب كاميرات مراقبة عالية الدقة</strong> – صوت وصورة مباشرة على الهاتف، مع عرض خاص محدود!</p>
+    <p><strong>تركيب كاميرات مراقبة عالية الجودة</strong> – صورة مباشرة على الهاتف، بدون XVR، عرض محدود!</p>
     
     <ul>
-      <li>✔️ مراقبة فورية من أي مكان</li>
-      <li>✔️ صوت ثنائي الاتجاه (تسمع وتتكلم)</li>
-      <li>✔️ بدون XVR – كل شيء على الهاتف</li>
-      <li>✔️ تركب في أقل من ساعتين</li>
-      <li>✔️ كفالة حقيقية + خدمة ما بعد البيع</li>
+      <li>✔️ مراقبة من أي مكان في العالم</li>
+      <li>✔️ صوت وصورة HD</li>
+      <li>✔️ بدون أسلاك كثيرة</li>
+      <li>✔️ ضمان حقيقي وخدمة ما بعد البيع</li>
     </ul>
 
-    <a class="cta" href="https://wa.me/213657261981?text=السلام%20عليكم،%20أريد%20مزيدًا%20من%20التفاصيل%20عن%20الكاميرات">📞 احجز الآن - تواصل معنا على واتساب</a>
+    <form onsubmit="sendToWhatsApp(); return false;">
+      <input type="text" id="name" placeholder="الاسم الكامل" required />
+      <input type="tel" id="phone" placeholder="رقم الهاتف" required />
+      <input type="text" id="state" placeholder="الولاية" required />
+      <button type="submit">📲 أرسل الطلب على واتساب</button>
+    </form>
 
     <div class="testimonials">
-      <p>💬 "خدمتهم سريعة والكاميرات ممتازة، ركبولي في نفس اليوم" – سامي من وهران</p>
-      <p>💬 "ثقة وأمانة، والأهم تقدر تشوف كل شيء من الهاتف" – نسرين من الجزائر العاصمة</p>
+      <p>💬 "خدمة ممتازة، الكاميرات تشتغل بشكل رائع" – سامي من الجزائر العاصمة</p>
+      <p>💬 "التركيب تم في نفس اليوم وباحتراف" – نسرين من وهران</p>
     </div>
 
     <div class="footer">
-      هذا العرض صالح لعدد محدود من الزبائن في منطقتك<br>
-      © KH.CAM - خدمات المراقبة الذكية
+      © KH CAM - تركيب وبيع أنظمة المراقبة | 2025
     </div>
   </div>
+
+  <script>
+    function sendToWhatsApp() {
+      let name = document.getElementById("name").value.trim();
+      let phone = document.getElementById("phone").value.trim();
+      let state = document.getElementById("state").value.trim();
+
+      if (!name || !phone || !state) return;
+
+      let message = `الاسم: ${name}%0aرقم الهاتف: ${phone}%0aالولاية: ${state}%0aأريد تركيب كاميرات مراقبة`;
+      let url = "https://wa.me/213657261981?text=" + message; // ← ضع رقمك هنا مع 213
+
+      window.open(url, '_blank');
+    }
+  </script>
 </body>
 </html>
