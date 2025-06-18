@@ -3,59 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>تركيب كاميرات المراقبة - عرض خاص</title>
+  <title>تركيب كاميرات مراقبة - كمال</title>
   <style>
-    body { font-family: Tahoma, sans-serif; margin: 0; padding: 0; background: #f0f2f5; color: #111; }
-    .container { max-width: 600px; margin: auto; padding: 20px; background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 8px; margin-top: 40px; }
+    body { font-family: Tahoma, sans-serif; background: #f7f7f7; margin: 0; padding: 0; }
+    .container { max-width: 800px; margin: auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
     h1 { color: #d91e18; text-align: center; }
-    ul { padding: 0 20px; }
-    li { margin-bottom: 10px; }
-    input, button { width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; font-size: 16px; }
-    button { background: #25D366; color: white; border: none; cursor: pointer; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin: 20px 0; }
+    @media(min-width: 600px) { .grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .card {
+      background: #fafafa;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .card:hover { background: #f0f0f0; }
+    section { margin-top: 40px; border-top: 1px dashed #ccc; padding-top: 30px; }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+    button {
+      background: #25D366;
+      color: white;
+      border: none;
+      font-size: 16px;
+    }
     button:hover { background: #1da851; }
-    .testimonials { margin-top: 30px; font-size: 14px; background: #f9f9f9; padding: 10px; border-radius: 6px; }
-    .footer { text-align: center; font-size: 12px; color: #555; margin-top: 20px; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>هل منزلك آمن فعلًا؟</h1>
-    <p><strong>تركيب كاميرات مراقبة عالية الجودة</strong> – صورة مباشرة على الهاتف، بدون XVR، عرض محدود!</p>
-    
-    <ul>
-      <li>✔️ مراقبة من أي مكان في العالم</li>
-      <li>✔️ صوت وصورة HD</li>
-      <li>✔️ بدون أسلاك كثيرة</li>
-      <li>✔️ ضمان حقيقي وخدمة ما بعد البيع</li>
-    </ul>
+    <h1>🔒 كاميرات مراقبة لكل الفئات</h1>
+    <p style="text-align:center;">اختر الفئة المناسبة لك لتحصل على عرض مخصص</p>
 
-    <form onsubmit="sendToWhatsApp(); return false;">
-      <input type="text" id="name" placeholder="الاسم الكامل" required />
-      <input type="tel" id="phone" placeholder="رقم الهاتف" required />
-      <input type="text" id="state" placeholder="الولاية" required />
-      <button type="submit">📲 أرسل الطلب على واتساب</button>
-    </form>
-
-    <div class="testimonials">
-      <p>💬 "خدمة ممتازة، الكاميرات تشتغل بشكل رائع" – سامي من الجزائر العاصمة</p>
-      <p>💬 "التركيب تم في نفس اليوم وباحتراف" – نسرين من وهران</p>
+    <div class="grid">
+      <div class="card" onclick="scrollToSection('homes')">🏠 أصحاب المنازل</div>
+      <div class="card" onclick="scrollToSection('shops')">🏪 محلات وعيادات</div>
+      <div class="card" onclick="scrollToSection('projects')">🏢 مشاريع كبيرة</div>
     </div>
 
-    <div class="footer">
-      © KH CAM - تركيب وبيع أنظمة المراقبة | 2025
-    </div>
+    <!-- القسم الأول -->
+    <section id="homes">
+      <h2>🏠 حلول المنازل الذكية</h2>
+      <p>نركب لك كاميرات عالية الجودة تحمي منزلك، مع مشاهدة مباشرة على الهاتف.</p>
+      <form onsubmit="sendToWhatsApp('منزل'); return false;">
+        <input type="text" id="name_home" placeholder="الاسم الكامل" required />
+        <input type="tel" id="phone_home" placeholder="رقم الهاتف" required />
+        <input type="text" id="state_home" placeholder="الولاية" required />
+        <button type="submit">📲 اطلب تركيب منزلي</button>
+      </form>
+    </section>
+
+    <!-- القسم الثاني -->
+    <section id="shops">
+      <h2>🏪 حلول المحلات والعيادات</h2>
+      <p>أنظمة متطورة للمراقبة الليلية، التنبيهات، والتسجيل.</p>
+      <form onsubmit="sendToWhatsApp('محل/عيادة'); return false;">
+        <input type="text" id="name_shop" placeholder="الاسم الكامل" required />
+        <input type="tel" id="phone_shop" placeholder="رقم الهاتف" required />
+        <input type="text" id="state_shop" placeholder="الولاية" required />
+        <button type="submit">📲 اطلب تركيب تجاري</button>
+      </form>
+    </section>
+
+    <!-- القسم الثالث -->
+    <section id="projects">
+      <h2>🏢 مشاريع +50 كاميرا</h2>
+      <p>لدينا تجهيزات كاملة للمشاريع والمؤسسات مع فريق تركيب محترف وخدمة ما بعد البيع.</p>
+      <form onsubmit="sendToWhatsApp('مشروع كبير'); return false;">
+        <input type="text" id="name_project" placeholder="الاسم الكامل" required />
+        <input type="tel" id="phone_project" placeholder="رقم الهاتف" required />
+        <input type="text" id="state_project" placeholder="الولاية" required />
+        <button type="submit">📲 اطلب عرض للمشاريع</button>
+      </form>
+    </section>
   </div>
 
   <script>
-    function sendToWhatsApp() {
-      let name = document.getElementById("name").value.trim();
-      let phone = document.getElementById("phone").value.trim();
-      let state = document.getElementById("state").value.trim();
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
 
-      if (!name || !phone || !state) return;
+    function sendToWhatsApp(type) {
+      let name = '';
+      let phone = '';
+      let state = '';
 
-      let message = `الاسم: ${name}%0aرقم الهاتف: ${phone}%0aالولاية: ${state}%0aأريد تركيب كاميرات مراقبة`;
-      let url = "https://wa.me/213657261981?text=" + message; // ← ضع رقمك هنا مع 213
+      if (type === 'منزل') {
+        name = document.getElementById("name_home").value.trim();
+        phone = document.getElementById("phone_home").value.trim();
+        state = document.getElementById("state_home").value.trim();
+      } else if (type === 'محل/عيادة') {
+        name = document.getElementById("name_shop").value.trim();
+        phone = document.getElementById("phone_shop").value.trim();
+        state = document.getElementById("state_shop").value.trim();
+      } else {
+        name = document.getElementById("name_project").value.trim();
+        phone = document.getElementById("phone_project").value.trim();
+        state = document.getElementById("state_project").value.trim();
+      }
+
+      let message = `الاسم: ${name}%0aرقم الهاتف: ${phone}%0aالولاية: ${state}%0aنوع الطلب: ${type}%0aأرغب في معرفة المزيد حول العروض.`;
+      let url = "https://wa.me/213657261981?text=" + message;
 
       window.open(url, '_blank');
     }
